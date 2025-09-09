@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Righteous, Manrope, Bebas_Neue } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/footer";
 import "./globals.css";
@@ -111,6 +113,8 @@ export default function RootLayout({
                 <Navbar />
                 <main className="flex-grow">{children}</main>
                 <Footer />
+                <Analytics />
+                <SpeedInsights />
               </body>
             </html>
     </ClerkProvider>
