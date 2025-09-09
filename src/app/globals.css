@@ -1,26 +1,243 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Custom scrollbar utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Custom CSS Variables for Ultra-Compact Design System */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Ultra-Compact Spacing (2px Grid) */
+  --spacing-xs: 0.125rem;    /* 2px */
+  --spacing-sm: 0.25rem;     /* 4px */
+  --spacing-md: 0.375rem;    /* 6px */
+  --spacing-lg: 0.5rem;      /* 8px */
+  --spacing-xl: 0.75rem;     /* 12px */
+  --spacing-2xl: 1rem;       /* 16px */
+  
+  /* Reduced Border Radius */
+  --radius-xs: 0.125rem;     /* 2px */
+  --radius-sm: 0.25rem;      /* 4px */
+  --radius-md: 0.375rem;     /* 6px */
+  --radius-lg: 0.5rem;       /* 8px */
+  --radius-xl: 0.75rem;      /* 12px */
+  
+  /* Compact Typography Scale */
+  --text-xs: 0.75rem;        /* 12px */
+  --text-sm: 0.875rem;       /* 14px */
+  --text-base: 0.875rem;     /* 14px */
+  --text-lg: 1rem;           /* 16px */
+  --text-xl: 1.125rem;       /* 18px */
+  --text-2xl: 1.375rem;      /* 22px */
+  --text-3xl: 1.75rem;       /* 28px */
+  
+  /* Shadows */
+  --shadow-soft: 0 2px 8px 0 rgb(0 0 0 / 0.08);
+  --shadow-medium: 0 4px 12px 0 rgb(0 0 0 / 0.12);
+  --shadow-strong: 0 8px 25px 0 rgb(0 0 0 / 0.15);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Ultra-Compact Button Styles */
+.btn-primary {
+  @apply px-3 py-1.5 rounded-sm bg-vibrant-orange text-white font-medium text-sm
+         hover:bg-vibrant-orange-600 transition-all duration-200
+         shadow-soft hover:shadow-medium;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.btn-secondary {
+  @apply px-3 py-1.5 rounded-sm border-2 border-dark-green-300 
+         text-dark-green-600 font-medium text-sm
+         hover:bg-dark-green-50 hover:border-dark-green-400 
+         hover:text-dark-green-600 transition-all duration-200
+         shadow-soft hover:shadow-medium bg-white;
+}
+
+.btn-ghost {
+  @apply px-3 py-1.5 rounded-sm text-dark-green-600 
+         font-medium text-sm hover:bg-dark-green-50 
+         transition-all duration-200;
+}
+
+/* Ultra-Compact Card Styles */
+.card-standard {
+  @apply bg-white rounded-md shadow-sm border border-light-beige-200 
+         p-2 transition-all duration-200;
+}
+
+.card-elevated {
+  @apply bg-white rounded-md shadow-medium border-0 
+         p-2 hover:shadow-strong transition-all duration-200;
+}
+
+.card-interactive {
+  @apply bg-white rounded-md shadow-sm border-2 border-transparent 
+         p-2 hover:border-vibrant-orange/20 hover:shadow-medium 
+         transition-all duration-200 cursor-pointer;
+}
+
+/* Ultra-Compact Form Styles */
+.input-standard {
+  @apply px-2 py-1.5 rounded-sm border-2 border-light-beige-200 
+         focus:border-vibrant-orange focus:ring-2 focus:ring-vibrant-orange/20 
+         transition-all duration-200 bg-white text-sm;
+}
+
+.select-standard {
+  @apply px-2 py-1.5 rounded-sm border-2 border-light-beige-200 
+         focus:border-vibrant-orange focus:ring-2 focus:ring-vibrant-orange/20 
+         transition-all duration-200 bg-white text-sm;
+}
+
+.checkbox-standard {
+  @apply rounded-xs border-2 border-light-beige-200 text-vibrant-orange 
+         focus:ring-2 focus:ring-vibrant-orange/20 transition-all duration-200;
+}
+
+/* Ultra-Compact Badge Styles */
+.badge-primary {
+  @apply px-1.5 py-0.5 rounded-xs bg-dark-green-100 
+         text-dark-green-600 text-xs font-medium;
+}
+
+.badge-accent {
+  @apply px-1.5 py-0.5 rounded-xs bg-vibrant-orange-100 
+         text-vibrant-orange-600 text-xs font-medium;
+}
+
+/* Clerk Modal Styling - Ultra-Compact */
+.clerk-modal {
+  @apply rounded-md border-2 border-light-beige-200 shadow-medium;
+}
+
+.clerk-modal-header {
+  @apply p-3 border-b border-light-beige-200;
+}
+
+.clerk-modal-content {
+  @apply p-3;
+}
+
+.clerk-modal-footer {
+  @apply p-3 border-t border-light-beige-200;
+}
+
+.clerk-input {
+  @apply px-2 py-1.5 rounded-sm border-2 border-light-beige-200 
+         focus:border-vibrant-orange focus:ring-2 focus:ring-vibrant-orange/20 
+         transition-all duration-200 bg-white text-sm;
+}
+
+.clerk-button {
+  @apply px-3 py-1.5 rounded-sm font-medium text-sm
+         transition-all duration-200 shadow-soft hover:shadow-medium;
+}
+
+.clerk-button-primary {
+  @apply bg-vibrant-orange text-white hover:bg-vibrant-orange-600;
+}
+
+.clerk-button-secondary {
+  @apply bg-white border-2 border-dark-green-300 text-dark-green-600
+         hover:bg-dark-green-50 hover:border-dark-green-400;
+}
+
+/* Custom Clerk Appearance Variables */
+.clerk-appearance {
+  --clerk-spacing-unit: 0.125rem;      /* 2px base unit */
+  --clerk-border-radius: 0.25rem;      /* 4px */
+  --clerk-font-size-small: 0.75rem;    /* 12px */
+  --clerk-font-size-base: 0.875rem;    /* 14px */
+  --clerk-font-size-large: 1rem;       /* 16px */
+  --clerk-spacing-small: 0.25rem;      /* 4px */
+  --clerk-spacing-medium: 0.5rem;      /* 8px */
+  --clerk-spacing-large: 0.75rem;      /* 12px */
+}
+
+/* Ultra-Compact Layout Utilities */
+.compact-section {
+  @apply my-4;
+}
+
+.compact-card {
+  @apply p-2;
+}
+
+.compact-button {
+  @apply px-3 py-1.5;
+}
+
+.compact-input {
+  @apply px-2 py-1.5;
+}
+
+.compact-gap {
+  @apply gap-2;
+}
+
+.compact-space-y {
+  @apply space-y-2;
+}
+
+.compact-space-x {
+  @apply space-x-2;
+}
+
+/* Responsive Ultra-Compact Adjustments */
+@media (min-width: 768px) {
+  .compact-card {
+    @apply p-3;
+  }
+  
+  .compact-button {
+    @apply px-4 py-2;
+  }
+  
+  .compact-input {
+    @apply px-3 py-2;
+  }
+  
+  .compact-gap {
+    @apply gap-3;
+  }
+  
+  .compact-space-y {
+    @apply space-y-3;
+  }
+  
+  .compact-space-x {
+    @apply space-x-3;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 1024px) {
+  .compact-card {
+    @apply p-4;
+  }
+  
+  .compact-button {
+    @apply px-5 py-2.5;
+  }
+  
+  .compact-input {
+    @apply px-4 py-2.5;
+  }
+  
+  .compact-gap {
+    @apply gap-4;
+  }
+  
+  .compact-space-y {
+    @apply space-y-4;
+  }
+  
+  .compact-space-x {
+    @apply space-x-4;
+  }
 }
