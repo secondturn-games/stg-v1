@@ -30,14 +30,14 @@ export function Navbar() {
               alt="Second Turn Games" 
               width={32}
               height={32}
-              className="h-8 w-8 md:hidden transition-transform duration-300 group-hover:scale-105"
+              className="h-8 w-auto md:hidden transition-transform duration-300 group-hover:scale-105"
             />
             <Image 
               src="/nav-logo.svg" 
               alt="Second Turn Games" 
-              width={48}
-              height={48}
-              className="hidden md:block h-10 lg:h-12 transition-transform duration-300 group-hover:scale-105"
+              width={80}
+              height={40}
+              className="hidden md:block h-10 w-auto lg:h-12 transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-vibrant-orange-500 to-warm-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" aria-hidden="true" />
           </Link>
@@ -83,14 +83,14 @@ export function Navbar() {
               alt="Second Turn Games" 
               width={32}
               height={32}
-              className="h-8 w-8 md:hidden transition-transform duration-300 group-hover:scale-105"
+              className="h-8 w-auto md:hidden transition-transform duration-300 group-hover:scale-105"
             />
             <Image 
               src="/nav-logo.svg" 
               alt="Second Turn Games" 
-              width={48}
-              height={48}
-              className="hidden md:block h-10 lg:h-12 transition-transform duration-300 group-hover:scale-105"
+              width={80}
+              height={40}
+              className="hidden md:block h-10 w-auto lg:h-12 transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-vibrant-orange-500 to-warm-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" aria-hidden="true" />
           </Link>

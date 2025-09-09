@@ -112,7 +112,7 @@ export default function RootLayout({
             <html lang="en" className={`${righteous.variable} ${manrope.variable} ${bebasNeue.variable}`}>
               <body className="bg-light-beige text-dark-green font-sans min-h-screen flex flex-col">
                 <Navbar />
-                <main className="flex-grow">{children}</main>
+                <main>{children}</main>
                 <Footer />
                 <Analytics />
                 <SpeedInsights />

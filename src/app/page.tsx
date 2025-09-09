@@ -2,7 +2,7 @@ import { SignUpButton } from '@clerk/nextjs';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-background py-4 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         {/* Hero Section */}
         <div className="my-4">
@@ -26,7 +26,7 @@ export default function HomePage() {
         </div>
 
         {/* Features Section */}
-        <div className="grid md:grid-cols-3 gap-2 my-4">
+        <div className="grid md:grid-cols-3 gap-2 my-4 mb-4">
           <div className="card-elevated">
             <div className="w-12 h-12 bg-vibrant-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
               <svg className="w-6 h-6 text-vibrant-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
