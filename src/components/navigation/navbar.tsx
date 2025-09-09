@@ -138,9 +138,11 @@ export function Navbar() {
                 title="Go to Profile"
               >
                 {user?.imageUrl ? (
-                  <img 
+                  <Image 
                     src={user.imageUrl} 
                     alt="Profile" 
+                    width={32}
+                    height={32}
                     className="w-full h-full object-cover"
                   />
                 ) : (

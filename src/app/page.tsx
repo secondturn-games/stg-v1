@@ -54,7 +54,7 @@ export default function HomePage() {
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-primary mb-2">Join a Thriving Community</h3>
-            <p className="text-secondary text-sm">Second Turn isn't just a marketplace — it's a hub for Baltic gamers. Chat, trade tips, post comments, and celebrate your love for games together.</p>
+            <p className="text-secondary text-sm">Second Turn isn&apos;t just a marketplace — it&apos;s a hub for Baltic gamers. Chat, trade tips, post comments, and celebrate your love for games together.</p>
           </div>
         </div>
       </div>
