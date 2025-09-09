@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const hdrs = await headers();
   const wh = new Webhook(process.env.CLERK_WEBHOOK_SECRET!);
 
-  let evt: { type: string; data: any };
+  let evt: { type: string; data: Record<string, unknown> };
   try {
     evt = wh.verify(body, {
       "svix-id": hdrs.get("svix-id")!,

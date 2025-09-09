@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SignUpButton } from '@clerk/nextjs';
 
 export default function HomePage() {
