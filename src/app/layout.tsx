@@ -105,6 +105,7 @@ export default function RootLayout({
           dividerText: 'text-dark-green-500 font-medium text-sm',
           footerAction: 'text-sm text-dark-green-600',
           footerActionLink: 'text-vibrant-orange hover:text-vibrant-orange-600 font-medium transition-colors duration-200',
+          footer: 'hidden', // Hide the footer with "Already have access? Sign in" link
         }
       }}
     >
